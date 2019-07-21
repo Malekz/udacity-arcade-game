@@ -64,3 +64,15 @@ Player.prototype.update = function() {
     this.resetPlayer();
   }
 };
+
+// draw the player on the screen
+Player.prototype.render = function() {
+  ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
+var LEFT_WALL = 0;
+var RIGHT_WALL = 400;
+var TOP_WALL = 0;
+var BOTTOM_WALL = 404;
+var PLAYER_HEIGHT = 101;
+var PLAYER_WIDTH = 83;
