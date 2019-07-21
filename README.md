@@ -4,7 +4,7 @@ This is the FOURTH project of Udacity's Front-End Nanodegree
 
 ### How to Start Game
 
-Open  
+Open  https://malekz.github.io/udacity-arcade-game/
 
 ### How to Play
 
