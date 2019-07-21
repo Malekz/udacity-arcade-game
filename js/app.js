@@ -76,3 +76,16 @@ var TOP_WALL = 0;
 var BOTTOM_WALL = 404;
 var PLAYER_HEIGHT = 101;
 var PLAYER_WIDTH = 83;
+
+// moves the player up, down, left, right
+Player.prototype.handleInput = function(keyUp) {
+  if (keyUp === "left" && this.x > LEFT_WALL) {
+    this.x = this.x - PLAYER_HEIGHT;
+  } else if (keyUp === "right" && this.x < RIGHT_WALL) {
+    this.x = this.x + PLAYER_HEIGHT;
+  } else if (keyUp === "up" && this.y > TOP_WALL) {
+    this.y = this.y - PLAYER_WIDTH;
+  } else if (keyUp === "down" && this.y < BOTTOM_WALL) {
+    this.y = this.y + PLAYER_WIDTH;
+  }
+};
