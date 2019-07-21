@@ -1,9 +1,10 @@
-frontend-nanodegree-arcade-game
+Udacity-frontend-nanodegree-arcade-game
 ===============================
+This is the FOURTH project of Udacity's Front-End Nanodegree
 
 ### How to Start Game
 
-Open index.html in your browser OR http://nataliejpchin.github.io/frontend-nanodegree-p3-arcade-game
+Open  
 
 ### How to Play
 
