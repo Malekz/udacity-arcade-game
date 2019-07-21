@@ -89,3 +89,34 @@ Player.prototype.handleInput = function(keyUp) {
     this.y = this.y + PLAYER_WIDTH;
   }
 };
+
+Player.prototype.resetPlayer = function() {
+  this.x = INITIAL_PLAYER_X;
+  this.y = INITIAL_PLAYER_Y;
+};
+
+// Now instantiate your objects.
+// Place all enemy objects in an array called allEnemies
+var allEnemies = [];
+
+// Instantiate all 3 enemies with random speed - one enemy for each row
+for (var i = 0; i < 3; i++) {
+  var randomSpeed = Math.floor(Math.random() * 5 + Math.random() * 5) * 100;
+  allEnemies.push(new Enemy(-50, 85 * i + 60, randomSpeed));
+}
+
+// Place the player object in a variable called player
+var player = new Player();
+
+// This listens for key presses and sends the keys to your
+// Player.handleInput() method. You don't need to modify this.
+document.addEventListener("keyup", function(e) {
+  var allowedKeys = {
+    37: "left",
+    38: "up",
+    39: "right",
+    40: "down"
+  };
+
+  player.handleInput(allowedKeys[e.keyCode]);
+});
