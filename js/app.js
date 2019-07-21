@@ -56,3 +56,11 @@ var Player = function() {
   // load player image
   this.sprite = "images/char-boy.png";
 };
+
+// alert when player reach water and reset player position
+Player.prototype.update = function() {
+  if (this.y <= 0) {
+    alert("You won!");
+    this.resetPlayer();
+  }
+};
